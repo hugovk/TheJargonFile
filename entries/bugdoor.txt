@@ -1,0 +1,10 @@
+bug door
+
+n. [common] A hole in the security of a system deliberately left in place by
+designers or maintainers, implemented in the form of a deliberate but subtle
+and thus hard to spot bug. This can be implemented as a slightly mis-spelled
+variable, a typo, extra or missing parentheses or a confusing regex. If the
+bug door is subsequently found then it can be plausibly denied as a simple
+programming mistake.
+
+Also see back door.
