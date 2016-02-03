@@ -1,0 +1,5 @@
+craptographer
+
+A cryptographer who deliberately builds in a backdoor (or bugdoor) into
+their algorithms. Craptographers typically work for the government or
+large multinational corporations. Also see craptography.
