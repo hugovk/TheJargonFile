@@ -1,0 +1,10 @@
+front door
+
+Also known as "secure golden key". A political term refering to a
+back door officially built into a cryptographic system in order
+to give the government and its minions access to everything in
+plain text for the purposes of mass surveillance. The word "front"
+is used to signify that this is something officially approved and
+which may be publicly known about rather than hidden.
+
+Also see craptography.
