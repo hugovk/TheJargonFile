@@ -1,0 +1,5 @@
+craptography
+
+The art and science of creating cryptographic algorithms which contain
+back doors or bug doors, sometimes also known as "secure golden key",
+"front door" or "key escrow".
