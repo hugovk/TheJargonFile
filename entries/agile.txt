@@ -1,0 +1,7 @@
+agile
+
+A piece of business babble used to describe a software development process
+which hackers mostly did anyway, before the term existed. Hackers almost
+never use the top down "divide and conquer" or "waterfall" method of
+development and tend to just write, test, debug and then itterate with
+occasional releases when things look stable enough.
