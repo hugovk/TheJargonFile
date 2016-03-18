@@ -1,3 +1,13 @@
 rubber duck debugging
 
-Hackers can sometimes get hung up on particular coding problems or bug fixes. When this happens it can sometimes be useful to deploy the rubber duck debugging method, which is to explain your problem (or how you think the system should work) to someone else. If you don't have a willing accomplice then an inanimate object - such as a rubber duck - will do. The act of explaining or trying to teach someone forces you to think about the problem from different angles and so may lead to a breakthrough. This is related to developmental psychology and the notion of thought as subsumed language and language as a behavior regulation system. Defects and hangups in your language machine may become more obvious if you invoke it explicitly and produce a coherent narrative. Just ask Dr Freud.
+Hackers can sometimes get hung up on particular coding problems or bug fixes.
+When this happens it can sometimes be useful to deploy the rubber duck
+debugging method, which is to explain your problem (or how you think the
+system should work) to someone else. If you don't have a willing accomplice
+then an inanimate object - such as a rubber duck - will do. The act of
+explaining or trying to teach someone forces you to think about the problem
+from different angles and so may lead to a breakthrough. This is related to
+developmental psychology and the notion of thought as subsumed language and
+language as a behavior regulation system. Defects and hangups in your
+language machine may become more obvious if you invoke it explicitly and
+produce a coherent narrative. Just ask Dr Freud.
