@@ -1,0 +1,10 @@
+kudos patching
+
+The practice of submitting patches to a project simply for the purpose
+of gaming the participation statistics and being able to say:
+
+"I have N patches in the well known and important project Foo".
+
+Kudos patches are usually trivial re-alignments which could be done
+automatically by any respectable text editor, changing the sequence
+of variable declarations or function arguments and so on.
