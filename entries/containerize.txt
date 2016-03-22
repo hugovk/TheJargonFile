@@ -1,0 +1,6 @@
+containerize
+
+To install an application within a container, as a way of redistributing it.
+This became fashionable with the appearance of Docker and has the advantage
+of the developer being able to exactly specify and reproduce the environment
+under which the code will run, thereby aiding reliability.
