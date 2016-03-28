@@ -1,0 +1,6 @@
+closeable source
+
+A term sometimes used by advocates of copyleft licenses to refer to
+systems having permissive licenses which can more easily be converted
+into proprietary software and their main development taken out of the
+public domain.
