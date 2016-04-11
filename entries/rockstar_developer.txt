@@ -1,0 +1,11 @@
+rockstar developer
+
+Otherwise known as the 10x developer, the rockstar developer is part of a
+mythology used as a labour intensification strategy by some unscrupulous
+Sillicon Valley sweatshops. There's no actual evidence to support the
+notion that some developers are innately and universally ten times better
+than average. Instead, some have more knowledge and/or experience in
+certain domains of computing and so can grind out code faster if they're
+already fluent in a specialised domain. Put a "10x" developer onto a task
+which they have no prior knowledge or experience of and they'll be not
+much different from average.
