@@ -1,6 +1,7 @@
-import os
-import string
 import operator
+import os
+import datetime
+import string
 import time
 
 def jargonParseEntry(filename):
@@ -75,6 +76,13 @@ def saveLicense(fp, year, publishername):
     fp.write("A copy of the license is included in the section entitled \"GNU\n")
     fp.write("Free Documentation License\".\n\n")
 
+
+def saveGenerated(fp):
+    """saves the last-generated timestamp"""
+    utcnow = datetime.datetime.utcnow().strftime("%A, %d %B %Y %I:%M%p UTC")
+    fp.write("This file last generated " + utcnow + "\n\n")
+
+
 def jargonWithDefinitions(text, definitions, isHtml):
     result = ''
     prevpos = 0
@@ -114,6 +122,9 @@ def jargonToManpage(manpageFilename, entries, version, publishername):
     fp.write(".SH LICENSE\n\n")
     saveLicense(fp, year, publishername)
 
+    fp.write(".SH GENERATED\n\n")
+    saveGenerated(fp)
+
     for entry in entries:
         title = entry[0]
         text = entry[1]
@@ -151,6 +162,9 @@ def jargonToOrgMode(orgFilename, entries, version, publishername):
 
     fp.write("* License\n\n")
     saveLicense(fp, year, publishername)
+
+    fp.write("* Generated\n\n")
+    saveGenerated(fp)
 
     fp.write("* Glossary\n")
 
@@ -192,6 +206,10 @@ def jargonToHTML(htmlFilename, entries, version, publishername):
     fp.write("      <H2>License</H2>\n")
     fp.write("      <p>\n")
     saveLicense(fp, year, publishername)
+    fp.write("      </p>\n")
+    fp.write("      <H2>Generated</H2>\n")
+    fp.write("      <p>\n")
+    saveGenerated(fp)
     fp.write("      </p>\n")
     fp.write("      <H2>Glossary</H2>\n")
 
