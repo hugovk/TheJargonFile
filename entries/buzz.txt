@@ -17,3 +17,7 @@ looking for a terminator type.
 
 4. To attempt to generate interest in your project by hyping it on social
 media. "buzzing the project"
+
+5. A failed social media project by Google, which turned into a privacy
+disaster when it automatically published all the user's email contacts
+without consent.
