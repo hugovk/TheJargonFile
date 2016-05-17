@@ -1,0 +1,9 @@
+ops
+
+Abbreviation of "operations". The activities carried out by a system
+operator (sysop) or administrator (sysadmin). At some point after 2010
+"systems administration" sometimes also became known as just "operations".
+
+The term has also been used by various hacktivist groups in
+situations where their activities include coordinated activity by
+independent system operators. 
