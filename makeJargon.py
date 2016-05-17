@@ -1,8 +1,8 @@
 import operator
 import os
 import datetime
-import string
 import time
+
 
 def jargonParseEntry(filename):
     if not os.path.isfile(filename):
@@ -19,23 +19,24 @@ def jargonParseEntry(filename):
     if len(line) > 2:
         for i in range(len(line)):
             if i == 0:
-                entry.append(line[i].replace('\n','').strip())
+                entry.append(line[i].replace('\n', '').strip())
             if i >= 2:
                 text = text + line[i]
-    text = text.replace('\n',' ')
+    text = text.replace('\n', ' ')
 
     # remove any gaps
     pos = text.find('  ')
     while pos != -1:
-        text = text.replace('  ',' ')
+        text = text.replace('  ', ' ')
         pos = text.find('  ')
 
     entry.append(text.strip())
 
     return entry
 
-# returns the number of sub-definitions within a description
+
 def jargonSubdefinitions(text):
+    """returns the number of sub-definitions within a description"""
     definitions = 0
     prevpos = 0
     for i in range(10):
@@ -52,9 +53,10 @@ def jargonSubdefinitions(text):
 
     # too many definitions
     if definitions > 8:
-        definitions  = 0
+        definitions = 0
 
     return definitions
+
 
 def jargonGetEntries(entriesDir):
     entries = []
@@ -66,14 +68,20 @@ def jargonGetEntries(entriesDir):
     entries.sort(key=operator.itemgetter(0))
     return entries
 
-# saves the license details
+
 def saveLicense(fp, year, publishername):
+    """saves the license details"""
     fp.write("Copyright (c)  " + str(year) + "  " + publishername + "\n")
-    fp.write("Permission is granted to copy, distribute and/or modify this document\n")
-    fp.write("under the terms of the GNU Free Documentation License, Version 1.3\n")
-    fp.write("or any later version published by the Free Software Foundation;\n")
-    fp.write("with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.\n")
-    fp.write("A copy of the license is included in the section entitled \"GNU\n")
+    fp.write("Permission is granted to copy, distribute and/or modify this "
+             "document\n")
+    fp.write("under the terms of the GNU Free Documentation License, Version "
+             "1.3\n")
+    fp.write("or any later version published by the Free Software "
+             "Foundation;\n")
+    fp.write("with no Invariant Sections, no Front-Cover Texts, and no "
+             "Back-Cover Texts.\n")
+    fp.write("A copy of the license is included in the section entitled "
+             "\"GNU\n")
     fp.write("Free Documentation License\".\n\n")
 
 
@@ -105,6 +113,7 @@ def jargonWithDefinitions(text, definitions, isHtml):
         result = result + "\n\n" + "<p>" + text[prevpos:] + "</p>"
     return result
 
+
 def jargonToManpage(manpageFilename, entries, version, publishername):
     year = int(time.strftime("%Y"))
 
@@ -114,9 +123,9 @@ def jargonToManpage(manpageFilename, entries, version, publishername):
     if os.path.isfile(manpageFilename + ".gz"):
         os.system("rm " + manpageFilename + ".gz")
 
-    fp = open(manpageFilename,'w')
+    fp = open(manpageFilename, 'w')
 
-    fp.write(".TH \"The Jargon File\" 1 \"" + time.strftime("%x") + \
+    fp.write(".TH \"The Jargon File\" 1 \"" + time.strftime("%x") +
              "\" \"\" \"" + version + "\"\n\n")
 
     fp.write(".SH LICENSE\n\n")
@@ -138,7 +147,9 @@ def jargonToManpage(manpageFilename, entries, version, publishername):
 
     os.system("gzip " + manpageFilename)
     print "manpage can be installed with the command:"
-    print "sudo install -m 644 " + manpageFilename + ".gz /usr/local/share/man/man1"
+    print("sudo install -m 644 " + manpageFilename +
+          ".gz /usr/local/share/man/man1")
+
 
 def jargonToOrgMode(orgFilename, entries, version, publishername):
     year = int(time.strftime("%Y"))
@@ -149,12 +160,13 @@ def jargonToOrgMode(orgFilename, entries, version, publishername):
     if os.path.isfile(orgFilename):
         os.system("rm " + orgFilename)
 
-    fp = open(orgFilename,'w')
+    fp = open(orgFilename, 'w')
 
     fp.write("#+TITLE: The Jargon File\n")
     fp.write("#+VERSION " + version + "\n")
     fp.write("#+OPTIONS: ^:nil\n")
-    fp.write("#+STYLE: <link rel=\"stylesheet\" type=\"text/css\" href=\"index.css\" />\n\n")
+    fp.write('#+STYLE: <link rel="stylesheet" type="text/css" '
+             'href="index.css" />\n\n')
 
     fp.write("#+BEGIN_CENTER\n")
     fp.write("*Yet more Jargon*\n")
@@ -194,7 +206,7 @@ def jargonToHTML(htmlFilename, entries, version, publishername):
     if os.path.isfile(htmlFilename):
         os.system("rm " + htmlFilename)
 
-    fp = open(htmlFilename,'w')
+    fp = open(htmlFilename, 'w')
 
     fp.write("<!DOCTYPE html>\n")
     fp.write("<html>\n")
@@ -233,7 +245,7 @@ def jargonToHTML(htmlFilename, entries, version, publishername):
             fp.write("        " + text + "\n")
             fp.write("        </p>\n")
 
-    fp.write("  </body>\n");
+    fp.write("  </body>\n")
     fp.write("</html>\n")
     fp.close()
 
